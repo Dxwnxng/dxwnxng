@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dxwnxng</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+    }
+    .video-bg {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    .video-bg iframe {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+    }
+    .overlay {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: white;
+      padding: 2rem;
+      min-height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      letter-spacing: 2px;
+      font-weight: 600;
+      text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    .link-button {
+      display: block;
+      width: 100%;
+      max-width: 300px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      border-radius: 12px;
+      margin: 0.5rem 0;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .link-button:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: scale(1.02);
+    }
+  </style>
+</head>
+<body>
+  <div class="video-bg">
+    <iframe id="bgVideo" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  </div>
+
+  <div class="overlay">
+    <h1>Dxwnxng</h1>
+    <a href="https://youtu.be/vPn_c61mW9s" class="link-button" target="_blank">
+      🎵 Watch My Dark Anthem
+    </a>
+  </div>
+
+  <script>
+    const videos = ['https://www.youtube.com/embed/vPn_c61mW9s?autoplay=1&mute=1&loop=1&playlist=vPn_c61mW9s', 'https://www.youtube.com/embed/pyf8cbqyfPs?autoplay=1&mute=1&loop=1&playlist=pyf8cbqyfPs', 'https://www.youtube.com/embed/UBURTj20HXI?autoplay=1&mute=1&loop=1&playlist=UBURTj20HXI', 'https://www.youtube.com/embed/7Z1N1fbkJ4w?autoplay=1&mute=1&loop=1&playlist=7Z1N1fbkJ4w', 'https://www.youtube.com/embed/5vZ6cw2c2so?autoplay=1&mute=1&loop=1&playlist=5vZ6cw2c2so', 'https://www.youtube.com/embed/pSUydWEqKwE?autoplay=1&mute=1&loop=1&playlist=pSUydWEqKwE', 'https://www.youtube.com/embed/3eP0Z4lHn3s?autoplay=1&mute=1&loop=1&playlist=3eP0Z4lHn3s', 'https://www.youtube.com/embed/5PDo8NwP9M0?autoplay=1&mute=1&loop=1&playlist=5PDo8NwP9M0', 'https://www.youtube.com/embed/X3H-4crGD6k?autoplay=1&mute=1&loop=1&playlist=X3H-4crGD6k', 'https://www.youtube.com/embed/Q8k-Kqwd5xA?autoplay=1&mute=1&loop=1&playlist=Q8k-Kqwd5xA'];
+    const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+    document.getElementById("bgVideo").src = randomVideo;
+  </script>
+</body>
+</html>
